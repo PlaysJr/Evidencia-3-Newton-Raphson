@@ -48,3 +48,23 @@ def newton_raphson(f_expr_str, x0, tol, max_iter):
 
     print("\nNo se alcanzo la tolerancia en el numero maximo de iteraciones.")
     return None
+
+def main():
+
+    while True:
+        opcion = menu()
+        
+        if opcion == 1:
+            funcion = input("Ingresa la función f(x): ") # Por ejemplo, "x**2 - 4"
+            x0 = float(input("Ingresa la estimación inicial x0: ")) # Por ejemplo, 2
+            tolerancia = float(input("Ingresa la tolerancia: ")) # Por ejemplo, 1e-6
+            iteraciones = int(input("Ingresa el número máximo de iteraciones: ")) # Por ejemplo, 100 o cualquier otro numero entero posible xd
+
+            newton_raphson(funcion, x0, tolerancia, iteraciones) 
+            
+        elif opcion == 2:
+            print("\n¡Hasta pronto! :).")
+            break
+
+if __name__ == "__main__":
+    main()
